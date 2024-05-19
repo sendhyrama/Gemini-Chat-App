@@ -24,8 +24,8 @@ class _ChatPageState extends State<ChatPage> {
   List<ChatBubble> chatBubbles = [
     const ChatBubble(
       direction: Direction.left,
-      message: 'Halo, saya GEMINI AI. Ada yang bisa saya bantu?',
-      photoUrl: 'https://i.pravatar.cc/150?img=47',
+      message: 'Halo sendhy, Ada yang bisa saya bantu?',
+      photoUrl: 'https://lh3.googleusercontent.com/erxU3a1GqMUBMX7N2oaRLFKzxUKYOCAB6zV0XEq2qcSLAj8hEYMCScWgIAfAB8MDfwfopIgDtU6BzCKfZtWJZac5nmWAWUWal0XNP11hcqGFvwjhY1CD',
       type: BubbleType.alone,
     ),
   ];
@@ -34,16 +34,11 @@ class _ChatPageState extends State<ChatPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: CupertinoButton(
-          child: const Icon(
-            Icons.arrow_back_ios,
-            color: Colors.white,
-          ),
-          onPressed: () => Navigator.pop(context),
-        ),
-        title: const Text('Gemini Personal Assistant AI',
+        automaticallyImplyLeading: false,
+        title: const Text('Personal Asistennya Sendhy',
             style: TextStyle(color: Colors.white)),
-        backgroundColor: Colors.blueGrey,
+        backgroundColor: Colors.blue[800],
+        centerTitle: true,
       ),
       body: Column(
         children: [
@@ -99,7 +94,7 @@ class _ChatPageState extends State<ChatPage> {
                               direction: Direction.left,
                               message: responseAI.text ??
                                   'Maaf, saya tidak mengerti',
-                              photoUrl: 'https://i.pravatar.cc/150?img=47',
+                              photoUrl: 'https://lh3.googleusercontent.com/erxU3a1GqMUBMX7N2oaRLFKzxUKYOCAB6zV0XEq2qcSLAj8hEYMCScWgIAfAB8MDfwfopIgDtU6BzCKfZtWJZac5nmWAWUWal0XNP11hcqGFvwjhY1CD',
                               type: BubbleType.alone,
                             )
                           ];
